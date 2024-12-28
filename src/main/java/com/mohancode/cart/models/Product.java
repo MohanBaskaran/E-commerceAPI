@@ -23,6 +23,14 @@ public class Product {
     private int stock;
     private int numOfReviews;
 
+    public List<String> getImages() {
+        return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
+
     @ElementCollection
     @Column(name = "image_url")
     private List<String> images;
@@ -105,7 +113,7 @@ public class Product {
     }
 
     public Product(String name, double price, String description, double rating,
-                   String category, String seller, int stock, int numOfReviews) {
+                   String category, String seller, int stock, int numOfReviews, List<String> images) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -114,6 +122,7 @@ public class Product {
         this.seller = seller;
         this.stock = stock;
         this.numOfReviews = numOfReviews;
+        this.images = images;
     }
 
     @Override
