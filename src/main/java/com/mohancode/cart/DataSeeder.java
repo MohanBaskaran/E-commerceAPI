@@ -10,9 +10,11 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class DataSeeder  implements CommandLineRunner {
+public class DataSeeder
+       // implements CommandLineRunner
+{
 
-    @Autowired
+  /*  @Autowired
     private ProductRepository productRepository;
 
     @Override
@@ -40,5 +42,5 @@ public class DataSeeder  implements CommandLineRunner {
             System.out.println("Demo data inserted");
 
         }
-    }
+    }*/
 }
