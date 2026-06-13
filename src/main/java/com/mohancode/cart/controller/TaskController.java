@@ -38,4 +38,40 @@ public class TaskController {
     public void deleteTask(@PathVariable Long id) {
          taskRepository.deleteById(id);
     }
+
+//    @RestController
+//    @RequestMapping("/weather")
+//    public class WeatherController {
+//
+//        @Autowired
+//        private WeatherRepository weatherRepository;
+//
+//        @DeleteMapping("/{id}")
+//        public ResponseEntity<Void> deleteWeatherById(@PathVariable Long id) {
+//            if (weatherRepository.existsById(id)) {
+//                weatherRepository.deleteById(id);
+//                return ResponseEntity.noContent().build();  // Returns 204 No Content
+//            } else {
+//                return ResponseEntity.notFound().build();   // Returns 404 Not Found
+//            }
+//        }
+//    }
+//
+//
+//    @RestController
+//    @RequestMapping("/weather")
+//    public class WeatherController {
+//
+//        @Autowired
+//        private WeatherRepository weatherRepository;
+//
+//        @GetMapping("/{id}")
+//        public ResponseEntity<Weather> getWeatherById(@PathVariable Long id) {
+//            return weatherRepository.findById(id)
+//                    .map(weather -> ResponseEntity.ok().body(weather))
+//                    .orElse(ResponseEntity.notFound().build());
+//        }
+//    }
+
+
 }

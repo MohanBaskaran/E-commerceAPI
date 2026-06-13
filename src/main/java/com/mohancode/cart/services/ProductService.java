@@ -9,6 +9,22 @@ import java.util.List;
 
 @Service
 public class ProductService {
+	
+	 private UserService userService;
+	   private EmailService emailService;
+	   
+
+	   @Autowired
+	   public ProductService(UserService userService) {
+	      this.userService = userService;
+	   }
+
+	   public ProductService(UserService userService, EmailService emailService) {
+	      this.userService = userService;
+	      this.emailService = emailService;
+	   }
+	
+	
 
     @Autowired
     private ProductRepository productRepository;
@@ -18,4 +34,6 @@ public class ProductService {
         //System.out.println("Products fetched: " + products.toString()); // Log products
         return products;
     }
+
+
 }
